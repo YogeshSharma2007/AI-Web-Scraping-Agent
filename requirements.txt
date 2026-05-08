@@ -1,0 +1,11 @@
+streamlit
+duckduckgo-search
+httpx
+beautifulsoup4
+lxml
+trafilatura
+pymupdf
+chromadb
+scikit-learn
+playwright
+Pillow

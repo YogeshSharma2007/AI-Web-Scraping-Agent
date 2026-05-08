@@ -1,0 +1,21 @@
+{
+  "project_name": "General Research AI Agent v2",
+  "max_pages": 100,
+  "crawl_depth": 2,
+  "timeout_seconds": 15,
+  "max_images": 40,
+  "max_pdfs": 20,
+  "retry_count": 2,
+  "concurrency": 8,
+  "max_search_results": 30,
+  "browser_fallback_enabled": false,
+  "browser_render_js": true,
+  "headless_browser": true,
+  "respect_robots_txt": true,
+  "ollama_model": "llama3",
+  "user_agent": "GeneralResearchAIAgentV2/2.0 (+local research agent)",
+  "hybrid_keyword_limit": 12,
+  "hybrid_semantic_limit": 12,
+  "chunk_word_size": 220,
+  "chunk_word_overlap": 40
+}

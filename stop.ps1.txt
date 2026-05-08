@@ -1,0 +1,19 @@
+Write-Host "Stopping General Research AI Agent..." -ForegroundColor Yellow
+
+Get-CimInstance Win32_Process -ErrorAction SilentlyContinue |
+Where-Object {
+    $_.CommandLine -like '*streamlit run app.py*'
+} |
+ForEach-Object {
+    Stop-Process -Id $_.ProcessId -Force
+    Write-Host "Stopped Streamlit (PID $($_.ProcessId))" -ForegroundColor Cyan
+}
+
+Get-Process ollama -ErrorAction SilentlyContinue |
+ForEach-Object {
+    Stop-Process -Id $_.Id -Force
+    Write-Host "Stopped Ollama (PID $($_.Id))" -ForegroundColor Cyan
+}
+
+Write-Host ""
+Write-Host "AI Agent Stopped" -ForegroundColor Green

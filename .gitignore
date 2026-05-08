@@ -1,0 +1,11 @@
+.venv/
+data/
+logs/
+downloads/
+images/
+pdfs/
+chromadb/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.dbgit
